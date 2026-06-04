@@ -5,5 +5,5 @@ test('',()=>{
 });
 
 test('',()=>{
-    expect(parzystosc(2)).toBe(false);
+    expect(parzystosc(2)).toBe(true);
 });
