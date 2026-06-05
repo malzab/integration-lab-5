@@ -25,7 +25,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.npm #na windows to byłby ~/Appdata/Local/npm-cache , 'npm config get cache' pokazuje lokalizacje cache na danym urządzeniu :)
-          key: ${{ runner.os }}-npm-${{ hashFiles{'package-lock.json'} }} #tu klucz może być inny ale czytałam, że najczęściej używa się hashu pliku lock z zależnościami
+          key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }} #tu klucz może być inny ale czytałam, że najczęściej używa się hashu pliku lock z zależnościami
 
       - run: npm install
       
